@@ -1,0 +1,19 @@
+{
+  "name": "mern-chat-server",
+  "version": "1.0.0",
+  "description": "MERN Stack + Socket.io Chat Backend",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb-memory-server": "^9.2.0",
+    "mongoose": "^8.3.1",
+    "socket.io": "^4.7.5"
+  }
+}

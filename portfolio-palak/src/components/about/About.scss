@@ -1,0 +1,177 @@
+.about {
+  padding: 100px 0;
+
+  .section-tag {
+    color: #d8bb91;
+    letter-spacing: 4px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+
+  .about-title {
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    color: #f5f1eb;
+    line-height: 1.15;
+    font-weight: 800;
+    max-width: 780px;
+  }
+
+  .about-description {
+    max-width: 760px;
+    margin: 28px 0 50px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: clamp(0.95rem, 2vw, 1.05rem);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 28px;
+    align-items: stretch;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 24px;
+    padding: 32px;
+    transition: all 0.35s ease;
+
+    &:hover {
+      transform: translateY(-6px);
+      border-color: rgba(216, 187, 145, 0.3);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    h3 {
+      color: #d8bb91;
+      margin-bottom: 24px;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+  }
+
+  .about-card--arsenal {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .category {
+    span {
+      display: block;
+      margin-bottom: 12px;
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+  }
+
+  .tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    div {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all 0.3s ease;
+      color: #ece8df;
+      font-size: 0.9rem;
+      font-weight: 500;
+
+      svg {
+        font-size: 1.05rem;
+        color: #d8bb91;
+      }
+
+      &:hover {
+        transform: translateY(-3px);
+        background: rgba(216, 187, 145, 0.12);
+        border-color: rgba(216, 187, 145, 0.35);
+        color: #ffffff;
+      }
+    }
+  }
+
+  .about-card--approach {
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+        font-size: 0.95rem;
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+        .check-icon {
+          color: #d8bb91;
+          font-size: 1rem;
+          flex-shrink: 0;
+        }
+
+        &:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .learning-card {
+    grid-column: 1 / -1;
+
+    h3 {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about {
+    padding: 70px 0;
+
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .learning-card {
+      grid-column: auto;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .about {
+    padding: 50px 0;
+
+    .glass-card {
+      padding: 24px 18px;
+    }
+
+    .tech div {
+      padding: 8px 12px;
+      font-size: 0.85rem;
+    }
+  }
+}

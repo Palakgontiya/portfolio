@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap");
+
+:root {
+  --bg-dark: #121212;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-card-hover: rgba(255, 255, 255, 0.06);
+  --accent-gold: #d8bb91;
+  --accent-gold-light: #f0dcc0;
+  --accent-gold-glow: rgba(216, 187, 145, 0.25);
+  --text-main: #f5f1eb;
+  --text-muted: rgba(255, 255, 255, 0.7);
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-glass-active: rgba(216, 187, 145, 0.3);
+  --nav-height: 72px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(216, 187, 145, 0.08), transparent 35%),
+    radial-gradient(circle at 85% 65%, rgba(255, 248, 240, 0.04), transparent 30%),
+    linear-gradient(135deg, #0d0d0d 0%, #141414 50%, #1a1a1a 100%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent-gold);
+  color: #121212;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(216, 187, 145, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(216, 187, 145, 0.6);
+}
+
+section {
+  scroll-margin-top: var(--nav-height);
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: min(1200px, calc(100% - 64px));
+  }
+}

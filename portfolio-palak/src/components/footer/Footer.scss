@@ -1,0 +1,134 @@
+.footer {
+  padding: 90px 0 36px;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(10, 10, 10, 0.4);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    margin: 24px 0 16px;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.2;
+    color: #f5f1eb;
+    font-weight: 800;
+  }
+
+  p {
+    max-width: 650px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+}
+
+.logo {
+  display: flex;
+  gap: 8px;
+  cursor: pointer;
+
+  span {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    color: #d8bb91;
+    font-size: 1.4rem;
+    font-weight: 800;
+    transition: all 0.35s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: rgba(216, 187, 145, 0.4);
+      background: rgba(216, 187, 145, 0.12);
+      box-shadow: 0 8px 20px rgba(216, 187, 145, 0.2);
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+  margin-top: 36px;
+
+  a {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #ece8df;
+    font-size: 1.2rem;
+    transition: all 0.35s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      color: #d8bb91;
+      border-color: rgba(216, 187, 145, 0.4);
+      background: rgba(216, 187, 145, 0.12);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.footer-bottom {
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  p {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.88rem;
+  }
+
+  .back-to-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: none;
+    color: #d8bb91;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      color: #ffffff;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 0 24px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
